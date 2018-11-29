@@ -6,6 +6,7 @@ import java.util.Set;
 
 import org.ndexbio.cxio.aspects.datamodels.AbstractAttributesAspectElement;
 import org.ndexbio.cxio.aspects.readers.CartesianLayoutFragmentReader;
+import org.ndexbio.cxio.aspects.readers.CyAnnotationsFragmentReader;
 import org.ndexbio.cxio.aspects.readers.CyGroupsFragmentReader;
 import org.ndexbio.cxio.aspects.readers.CyTableColumnFragmentReader;
 import org.ndexbio.cxio.aspects.readers.CyViewsFragmentReader;
@@ -131,6 +132,7 @@ public final class CxioUtil {
         final AspectFragmentReader hidden_attributes_reader = HiddenAttributesFragmentReader.createInstance();
         final AspectFragmentReader visual_properties_reader = CyVisualPropertiesFragmentReader.createInstance();
         final AspectFragmentReader group_reader = CyGroupsFragmentReader.createInstance();
+        final AspectFragmentReader annotations_reader = CyAnnotationsFragmentReader.createInstance();
         final AspectFragmentReader subnetwork_reader = SubNetworkFragmentReader.createInstance();
         final AspectFragmentReader network_rel_reader = NetworkRelationsFragmentReader.createInstance();
         final AspectFragmentReader views_reader = CyViewsFragmentReader.createInstance();
@@ -146,6 +148,7 @@ public final class CxioUtil {
         aspect_readers.add(node_attributes_reader);
         aspect_readers.add(hidden_attributes_reader);
         aspect_readers.add(visual_properties_reader);
+        aspect_readers.add(annotations_reader);
         aspect_readers.add(group_reader);
         aspect_readers.add(subnetwork_reader);
         aspect_readers.add(network_rel_reader);
